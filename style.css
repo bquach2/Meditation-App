@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .app {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  body {
+    animation: 100000ms ease-in-out infinite color-change;
+  }
+  
+  @keyframes color-change {
+    0% {
+        background-color: #5bafeb
+    }
+
+    20% {
+        background-color: #66bf39
+    }
+
+    40% {
+        background-color: #cada3b
+    }
+
+    60% {
+        background-color: rgba(255, 51, 85, 0.63)
+    }
+
+    80% {
+        background-color: #6b4cbf
+    }
+
+    90% {
+        background-color: lavender;
+    }
+    100% {
+        background-color: rgb(107, 206, 240);
+    }
+    
+  }
+  
+  .time-select{
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+  }
+  .time-select button {
+    color: #FFF8DC;
+    width: 30%;
+    height: 10%;
+    background: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 5px solid #FFF8DC;
+  }
+ 
+  .play {
+    position: absolute;
+    height: 10%;
+    top: 45%;
+    left: 1%;
+  }
+  .replay {
+    position: absolute;
+    height: 5%;
+    top: 48%;
+    left: -52%;
+  }
+  .time-select button:hover {
+    transition: all .75s ease-out;
+
+    background: #FFF8DC;
+    color: black;
+  }
+  
+  .player {
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .player svg {
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+  }
+  .player svg circle {
+    transition: all 0.2s ease-in-out;
+  }
+  .time-display {
+    color: #FFF8DC;
+    position: absolute;
+    font-size: 50px;
+    bottom: 10%;
+    left: 0%;
+    
+  }
+  
+  video {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+  }
